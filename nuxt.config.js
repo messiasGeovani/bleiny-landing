@@ -1,5 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  srcDir: './src/',
   head: {
     title: 'bleiny-landing',
     htmlAttrs: {
@@ -15,7 +16,11 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['@/assets/scss/_reset.scss'],
+
+  styleResources: {
+    scss: ['@/assets/scss/_variables.scss'],
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -29,14 +34,29 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
+    '@nuxtjs/style-resources',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  googleFonts: {
+    families: {
+      Nunito: true,
+      Rochester: true,
+      Romanesco: true,
+      Lato: [100, 300],
+      Raleway: {
+        wght: [100, 400, 600],
+        ital: [100],
+      },
+    },
+  },
 }
