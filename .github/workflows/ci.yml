@@ -50,3 +50,6 @@ jobs:
 
       - name: Run tests 🧪
         run: yarn test
+
+      - name: Run Build 🛠️
+        run: yarn build
