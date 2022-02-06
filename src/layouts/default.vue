@@ -1,30 +1,31 @@
 <template>
-  <div class="has-background-black">
-    <BNavbar type="is-dark-invert">
+  <div class="root__container has-background-black">
+    <BNavbar type="is-dark-invert" fixed-top>
       <template #brand>
         <BNavbarItem tag="router-link" :to="{ path: '/' }">
-          <img
-            src="https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png"
-            alt="Lightweight UI components for Vue.js based on Bulma"
-          />
+          <span class="navbar__title">Bleiny</span>
         </BNavbarItem>
       </template>
       <template #start>
-        <BNavbarItem href="#"> Home </BNavbarItem>
-        <BNavbarItem href="#"> Documentation </BNavbarItem>
-        <BNavbarDropdown label="Info">
-          <BNavbarItem href="#"> About </BNavbarItem>
-          <BNavbarItem href="#"> Contact </BNavbarItem>
+        <BNavbarItem href="#"> News </BNavbarItem>
+        <BNavbarItem href="#"> Assets </BNavbarItem>
+        <BNavbarItem href="#"> Tokenomics </BNavbarItem>
+        <BNavbarDropdown label="Docs">
+          <BNavbarItem href="#"> Roadmap </BNavbarItem>
+          <BNavbarItem href="#"> Bleiny Wiki </BNavbarItem>
+          <BNavbarItem href="#"> Whitepaper </BNavbarItem>
+          <BNavbarItem href="#"> FAQs </BNavbarItem>
         </BNavbarDropdown>
+        <BNavbarItem href="#"> Team </BNavbarItem>
+        <BNavbarItem href="#"> Partner </BNavbarItem>
       </template>
 
       <template #end>
         <BNavbarItem tag="div">
           <div class="buttons">
             <BButton type="is-primary">
-              <strong>Sign up</strong>
+              <strong>Marketplace</strong>
             </BButton>
-            <BButton type="is-text">Log in</BButton>
           </div>
         </BNavbarItem>
       </template>
@@ -54,3 +55,21 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.root {
+  &__container {
+    height: 100vh;
+    width: 100%;
+  }
+}
+
+.navbar {
+  &__title {
+    font-family: 'Rochester', cursive;
+    text-shadow: 4px 4px 4px rgba(191, 191, 191, 0.25);
+    color: white;
+    font-size: 2.1em;
+  }
+}
+</style>

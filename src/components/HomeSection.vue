@@ -8,13 +8,13 @@
         alt="A random image"
         :responsive="true"
         :lazy="true"
-        custom-class="logo"
+        custom-class="home__logo"
         class="is-128x128"
       />
 
       <div class="ml-5">
-        <h1 class="title">Bleiny</h1>
-        <h2 class="is-size-3-desktop mt-2 subtitle">
+        <h1 class="home__title">Bleiny</h1>
+        <h2 class="is-size-3-desktop mt-2 home__subtitle">
           Elevate your horror experience...
         </h2>
       </div>
@@ -50,11 +50,6 @@ export default {
   color: white;
 }
 
-.logo {
-  max-height: 200px;
-  max-width: 200px;
-}
-
 .home {
   &__container {
     width: 100%;
@@ -67,20 +62,25 @@ export default {
     top: 200px;
   }
 
+  &__logo {
+    max-height: 200px;
+    max-width: 200px;
+  }
+
+  &__title {
+    @extend %head-text;
+    font-family: 'Rochester', cursive;
+    font-size: 4.5em;
+  }
+
+  &__subtitle {
+    @extend %head-text;
+    font-family: 'Romanesco', cursive;
+    letter-spacing: 0.1em;
+  }
+
   &__text {
     text-transform: uppercase;
   }
-}
-
-.title {
-  @extend %head-text;
-  font-family: 'Rochester', cursive;
-  font-size: 4.5em;
-}
-
-.subtitle {
-  @extend %head-text;
-  font-family: 'Romanesco', cursive;
-  letter-spacing: 0.1em;
 }
 </style>

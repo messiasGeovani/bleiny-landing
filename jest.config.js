@@ -18,5 +18,5 @@ module.exports = {
   testEnvironment: 'jsdom',
   transformIgnorePatterns: ['node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)'],
   setupFiles: ['core-js'],
-  setupFilesAfterEnv: ['<rootDir>/test/config/vueSetup.js'],
+  setupFilesAfterEnv: ['<rootDir>/test/config/vueSetup.ts'],
 }

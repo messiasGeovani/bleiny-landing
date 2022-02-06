@@ -1,4 +1,5 @@
 import { mount, Wrapper } from '@vue/test-utils'
+import Vue from 'vue'
 import HomeSection from '@/components/HomeSection.vue'
 
 const matches = {
@@ -7,7 +8,7 @@ const matches = {
 }
 
 describe('HomeSection', () => {
-  let wrapper: Wrapper<HomeSection, Element>
+  let wrapper: Wrapper<Vue, Element>
 
   beforeEach(() => {
     wrapper = mount(HomeSection)
