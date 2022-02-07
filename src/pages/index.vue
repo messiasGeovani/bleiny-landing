@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import HomeSection from '@/components/HomeSection.vue'
+import HomeSection from '~/components/templates/HomeSection.vue'
 
 export default {
   name: 'IndexPage',

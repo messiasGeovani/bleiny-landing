@@ -19,4 +19,5 @@ module.exports = {
   transformIgnorePatterns: ['node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)'],
   setupFiles: ['core-js'],
   setupFilesAfterEnv: ['<rootDir>/test/config/vueSetup.ts'],
+  coverageDirectory: '<rootDir>/test/coverage',
 }

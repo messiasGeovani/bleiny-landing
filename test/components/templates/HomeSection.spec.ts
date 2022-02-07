@@ -1,6 +1,6 @@
 import { mount, Wrapper } from '@vue/test-utils'
 import Vue from 'vue'
-import HomeSection from '@/components/HomeSection.vue'
+import HomeSection from '~/components/templates/HomeSection.vue'
 
 const matches = {
   title: 'Bleiny',
